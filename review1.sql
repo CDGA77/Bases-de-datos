@@ -10,10 +10,10 @@ INSERT INTO
     )
 VALUES ('Juan', 'Pérez', '2000-05-24'),
     (
-        'Maria', 'López', '1999-02-15'
+        "Maria", "López", "1999-02-15"
     ),
     (
-        "Pedro", 'Gonzalez', '1998-03-07'
+        "Pedro", "Gonzalez", "1998-03-07"
     ),
     (
         "Daniel", "Gaviria", "2001-05-21"
@@ -40,7 +40,12 @@ SELECT * FROM Materias;
 -- Creación de la tabla Notas
 -- con llaves foráneas a Estudiantes y Materias
 CREATE TABLE Notas (
-    id INT PRIMARY KEY AUTO_INCREMENT, idestudiante INT, idmateria INT, nota DECIMAL, FOREIGN KEY (idestudiante) REFERENCES Estudiantes (id,), FOREIGN KEY (idmateria) REFERENCES Materias (id)
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    idestudiante INT,
+    idmateria INT,
+    nota DECIMAL, 
+    FOREIGN KEY (idestudiante) REFERENCES Estudiantes (id), 
+    FOREIGN KEY (idmateria) REFERENCES Materias (id)
 );
 
 INSERT INTO
