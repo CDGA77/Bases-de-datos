@@ -11,9 +11,9 @@ CREATE TABLE Tipos_vehiculos (
 );
 
 INSERT INTO
-    Tipos_vehiculos (Tipo_vehiculo)
-VALUES ("carro"),
-    ("camioneta");
+    Tipos_vehiculos (Tipo_vehiculo, marcas_id)
+VALUES ("carro", 2),
+    ("camioneta", 1);
 
 SELECT * FROM Tipos_vehiculos
 
@@ -60,5 +60,4 @@ FROM
     INNER JOIN Marcas
 WHERE
     Vehiculos.color_id = Colores.id
-    AND Vehiculos.tipo_vehiculo_id = Tipos_vehiculos.id
-    AND Tipos_vehiculos.marcas_id = Marcas.id;
+    AND Vehiculos.id = Tipos_vehiculos.id
